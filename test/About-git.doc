@@ -1,0 +1,55 @@
+
+What is Version Control: As the name implies, is a system that records all the changes made to a file or set of files, why and when they were made and the contents of the change so a specific version may be called later if and when needed. 
+
+Use case: A company may have many developers spread across the world will have issues like collaborating on a projects from different regions
+Versioning: Solving issues of storing different versions of a code 
+Rollback: Ability to roll back to previous versions of a code for debugging to ascertain whjat changes introduced bugs and how it can be fixed
+Backup: When a particular employees system breaks down how do we get a backup of work already done by the developer? We need a means of backup so that no time would be lost
+
+It is the system that makes sure that all team members are working on the latest version of a file/code and makes sure all the members can work simultaneously on the same project
+Typically, every developer will have a working copy of the source code and then there’s a central repository/server where commits and updates are made to
+Benefits
+Helps in managing and protecting source code from unintended error
+Keeps track of all modifications made to code and by whom and helps in tracking root source of errors
+Support developers’ workflow and not any rigid way of working
+
+
+Best Version control systems
+Github Gitlab Perforce Beanstalk AWS CodeCommit Apache Subversion Team Foundation Server Mercurial Bitbucket Concurrent Concurrent Version control
+Source Control Management (SCM)
+When working on software application, there’s a need to develop or write multiple lines of code. This is called source code. In the process multiple file are created and a collection of these files are called a repository. Now to manage this repository we need a tool to keep track of changes to our code, this is referred to as SCM tool. It tracks modifications to s source code repository. It also helps resolve conflicts that may result in code when merging updates from multiple contributors working on the same project. 
+Git is one of the best used SCM tool: It is a free and open source distributed version control system created by Linus Torvalds who is also the creator of Linux. It is designed to handle small to very large complex projects with efficiency and it is fast, secure, easy to learn and provides version history, collaborative tracking history.
+Github: Is a repository that houses all the files and folders tracked by git online and is accessible to all collaborators of the project
+Basics of Git
+Repository: A place where we store our files
+Remote: A repository that is not physically on your machine. Could be a folder on the cloud on a website like Github, GitLab, BitBucket. Helps to improve team collaboration and also serves as a backup if a local machine crash.
+
+Clone: Used to make a copy of any remote repository to local repository
+Status: Displays information about current repo status of the working directory and staging area.
+It lists out all files and indicates if changes have been made that are tracked or untracked by git
+
+Add: This command adds changes made from working directory to staging area, the changes in this staging area are not actually recorded or saved unless it is committed
+Pull: This command is used to fetch or download content from a remote repo to a local repo and updates the local repo to match the contents downloaded
+Conflicts: Conflicts arise when multiple members working on a project make changes on the same line. It is usually highlighted showing the two versions and we get to choose which has higher priority or if we would like to keep both
+
+Merge: A procedure to be followed when intending to merge 2 versions of a file
+
+Push: A command to update the remote repo with changes made in local repo. Note that these updates need to have been committed for it to take effect
+Commands in Git
+First step to using git is installing it. We can do this using the git installer for Windows or any OS you are using.
+Next is the use of code editor, there are several ones available like VSCode, IntelliJIdea, Atom etc
+After Opening up the terminal in any one of these editors we can start running our git commands
+git: running the git command on the terminal (application running on a computer that acts as an interface for typing text commands) of a computer will output the available options. If an output of command not found ensues, it means it has not been installed and we will need to got to the repository to download git version compatible with our local machine
+git –version: Running this command on the CLI will output the version/versions of git currently installed on a local machine/
+git init - > initializes a new git repository responsible for tracking all the changes in the folder of where it was initialized
+git clone <url>   -> is a command used to bring a repository that is hosted somewhere like Github or Bitbucket into a folder on your local machine, i.e to make a clone/copy
+git add <file-name> or . -> When changes have been made to a file or folder, this command instructs git to track the changes so far made in the working directory to the staging area
+git commit -> typing git commit in CLI asks git to save the files worked on thus far. It has a “-m” flag which stands for message and followed by a short descriptive message saying what change has been made. There are so many other flags to increase the functionality of git
+format: git commit -m “Type your message here”
+git push -> typing this will upload commits (saved files tracked by git) to a remote repository like Github
+git pull: When there are changes on the remote repo say another developer has made new changes to an application and has pushed it to the remote repo, you want to download those changes to your local machine so that you are working with the most up to date version of the code
+
+git status: Typing this command on CLI displays information about current state of the working dirtectory
+Git branch: A b ranch is an independent line of development. It serves as an abstraction for the edit, stage or commit process. The main or master is the default branch and when a new branch is created, it makes a new replica of the branch from which it was created
+To create a new branch, we use: git branch <branch-name>
+
